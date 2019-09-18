@@ -5,7 +5,7 @@ pipeline {
 
     stage('Stage 1') {
       steps {
-        timeout(time: 1, unit: 'MINUTES') {
+        timeout(time: 10, unit: 'SECONDS') {
           waitUntil {
             script {
               echo 'This stage will succeed immediately without waiting for a minute.'
@@ -18,7 +18,7 @@ pipeline {
 
     stage('Stage 2') {
       steps {
-        timeout(time: 1, unit: 'MINUTES') {
+        timeout(time: 10, unit: 'SECONDS') {
           waitUntil {
             script {
               echo 'This stage should succeed immediately if google.com is up, otherwise jenkins will retry until 1min runs out.'
