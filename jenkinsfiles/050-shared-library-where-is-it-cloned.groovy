@@ -1,12 +1,4 @@
-library(
-  identifier: 'jenkins-shared-library@1.0.4',
-  retriever: modernSCM(
-    [
-      $class: 'GitSCMSource',
-      remote: 'https://github.com/hoto/jenkins-shared-library.git'
-    ]
-  )
-)
+library('jenkins-shared-library@1.0.4')
 
 pipeline {
   agent any
